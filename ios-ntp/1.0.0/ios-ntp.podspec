@@ -11,4 +11,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.resources    = 'resources/ntp.hosts'
   s.dependency  'CocoaAsyncSocket', '~> 0.0.1'
+	
+  s.prefix_header_contents = '#define NTP_Logging(fmt, ...)
+#define LogInProduction(fmt, ...) \
+NSLog((@"%@|" fmt), [NSString stringWithFormat: @"%24s", \
+[[[self class] description] UTF8String]], ##__VA_ARGS__)'
+
 end
