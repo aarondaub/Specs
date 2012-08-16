@@ -9,10 +9,6 @@ Pod::Spec.new do |s|
   s.source_files = 'src/*'
   s.requires_arc = false
   s.platform     = :ios
-
-  s.dependency  'CocoaAsyncSocket', '~> 0.0.1'
-
-  s.frameworks   = 'CFNetwork', 'sys'
-
   s.resources    = 'resources/ntp.hosts'
+  s.dependency  'CocoaAsyncSocket', '~> 0.0.1'
 end
