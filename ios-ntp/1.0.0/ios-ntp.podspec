@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = 'A network time protocol client for iOS.'
   s.homepage     = 'https://github.com/w5mith/ios-ntp'
   s.author       = 'Gavin Eadie, Juan Batiz-Benet'
-  s.source       = { :git => 'https://github.com/w5mith/ios-ntp.git', :commit => '428b3a77f1' }
+  s.source       = { :git => 'https://github.com/w5mith/ios-ntp.git', :tag => 'v1.0.0' }
   s.source_files = 'src/*'
   s.requires_arc = false
   s.platform     = :ios
