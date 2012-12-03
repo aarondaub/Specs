@@ -49,6 +49,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => 'https://github.com/aarondaub/pubnub-api.git', :tag => '3.3.0' }
   s.platform     = :ios, '5.0'
-  s.source_files = 'objective-c/Pubnub/PubNub'
+  s.source_files = 'objective-c/3.3/Pubnub/PubNub'
   s.requires_arc = true
 end
