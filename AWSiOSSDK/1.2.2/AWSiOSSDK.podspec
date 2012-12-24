@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   end
 
   # S3 does not build because it needs a Constants.h file defined by clients
-  %w[ AutoScaling CloudWatch DynamoDB EC2 ElasticLoadBalancing S3 SES SNS QS STS SimpleDB ].each do |name|
+  %w[ S3  ].each do |name|
     s.subspec name do |ss|
       ss.source_files = "src/Amazon.#{name}/**/*.m", "src/include/#{name}/*.h"
       ss.dependency 'AWSiOSSDK/Runtime'
