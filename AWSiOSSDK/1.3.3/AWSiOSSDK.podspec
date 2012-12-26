@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         =  'AWSiOSSDK'
-  s.version      =  '1.2.2'
+  s.version      =  '1.3.3'
   s.license      =  'Apache 2.0'
   s.summary      =  'Amazon Web Services SDK for iOS.'
   s.homepage     =  'http://aws.amazon.com/sdkforios'
   s.author       =  { 'Amazon Web Services' => 'amazonwebservices' }
-  s.source       =  { :git => 'https://github.com/aws/aws-sdk-ios.git', :commit => 'f730a57586a7eb8a0e83e888ad06c954e25806ba' }
+  s.source       =  { :git => 'https://github.com/aws/aws-sdk-ios.git', :commit => '4fb867331360a16dfc472849791e584a621967bf' }
   s.description  =  'The AWS SDK for iOS provides a library, code samples, and documentation for developers to build connected mobile applications using AWS.'
   s.platform     =  :ios
 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   end
 
   # S3 does not build because it needs a Constants.h file defined by clients
-  %w[ AutoScaling CloudWatch DynamoDB EC2 ElasticLoadBalancing S3 SES SNS QS STS SimpleDB ].each do |name|
+  %w[ AutoScaling CloudWatch DynamoDB EC2 ElasticLoadBalancing S3 SES SNS SQS STS SimpleDB ].each do |name|
     s.subspec name do |ss|
       ss.source_files = "src/Amazon.#{name}/**/*.m", "src/include/#{name}/*.h"
       ss.dependency 'AWSiOSSDK/Runtime'
