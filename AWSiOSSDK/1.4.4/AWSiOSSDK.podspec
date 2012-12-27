@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     ss.dependency 'SBJson'
   end
 
-  %w[ S3  ].each do |name|
+  %w[ S3 DynamoDB  ].each do |name|
     s.subspec name do |ss|
       ss.source_files = "src/Amazon.#{name}/**/*.m", "src/include/#{name}"
       ss.dependency 'AWSiOSSDK/Runtime'
